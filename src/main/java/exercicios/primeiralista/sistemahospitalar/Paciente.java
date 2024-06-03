@@ -1,4 +1,4 @@
-package exercicios.sistemahospitalar;
+package exercicios.primeiralista.sistemahospitalar;
 
 public class Paciente {
     private String nome;

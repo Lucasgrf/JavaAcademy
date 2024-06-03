@@ -1,4 +1,4 @@
-package exercicios.sistemabiblioteca;
+package exercicios.primeiralista.sistemabiblioteca;
 
 import java.util.ArrayList;
 

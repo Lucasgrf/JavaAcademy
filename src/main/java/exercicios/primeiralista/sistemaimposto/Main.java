@@ -1,4 +1,4 @@
-package exercicios.sistemaimposto;
+package exercicios.primeiralista.sistemaimposto;
 
 import java.util.Scanner;
 
@@ -19,7 +19,6 @@ public class Main {
             Pessoa pessoa = new Pessoa(nome, salario);
             ImpostoRenda impostoRenda = new ImpostoRenda(pessoa);
             impostoRenda.imprimir();
-
 
             System.out.println("Deseja ver o imposto de outra pessoa? S/N");
             String opcao = scan.nextLine();

@@ -1,4 +1,4 @@
-package exercicios.sistemaimposto;
+package exercicios.primeiralista.sistemaimposto;
 
 public class Pessoa {
      private String nome;

@@ -1,4 +1,4 @@
-package exercicios.sistemacompras;
+package exercicios.primeiralista.sistemacompras;
 
 
 import java.util.ArrayList;
