@@ -1,4 +1,4 @@
-package exercicios.exerc02;
+package exercicios.sistemaescolar;
 
 import java.util.ArrayList;
 

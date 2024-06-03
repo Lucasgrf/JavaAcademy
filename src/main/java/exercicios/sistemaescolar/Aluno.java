@@ -1,4 +1,4 @@
-package exercicios.exerc02;
+package exercicios.sistemaescolar;
 
 public class Aluno {
     private String nome, matricula;

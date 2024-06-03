@@ -1,4 +1,4 @@
-package exercicios.exerc02;
+package exercicios.sistemaescolar;
 
 public class Main {
     public static void main(String[] args) {

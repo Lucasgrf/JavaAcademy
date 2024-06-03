@@ -1,4 +1,4 @@
-package exercicios.exerc01;
+package exercicios.sistemabiblioteca;
 
 public class Livro {
     private String titulo, autor;
@@ -43,4 +43,5 @@ public class Livro {
                 ", autor = '" + autor + '\'' +
                 ", anoPublicacao = " + anoPublicacao;
     }
+
 }
