@@ -1,4 +1,4 @@
-package exercicios.primeiralista.sistemabiblioteca;
+package lucas.exercicios.primeiralista.sistemabiblioteca;
 
 public class Livro {
     private String titulo, autor;

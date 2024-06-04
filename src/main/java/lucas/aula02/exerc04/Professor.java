@@ -1,4 +1,4 @@
-package aula02.exercicios.exerc04;
+package lucas.aula02.exerc04;
 
 public class Professor extends Pessoa{
     private String matricula;

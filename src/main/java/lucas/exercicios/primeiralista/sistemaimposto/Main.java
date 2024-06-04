@@ -1,4 +1,4 @@
-package exercicios.primeiralista.sistemaimposto;
+package lucas.exercicios.primeiralista.sistemaimposto;
 
 import java.util.Scanner;
 

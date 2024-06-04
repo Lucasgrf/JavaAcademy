@@ -1,4 +1,4 @@
-package aula02.exercicios.exerc01;
+package lucas.aula02.exerc01;
 
 public class Usuario {
     protected static String nome, email, telefone;

@@ -1,4 +1,4 @@
-package exercicios.primeiralista.sistemaescolar;
+package lucas.exercicios.primeiralista.sistemaescolar;
 
 public class Aluno {
     private String nome, matricula;

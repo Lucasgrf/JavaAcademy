@@ -1,4 +1,4 @@
-package exercicios.primeiralista.sistemabiblioteca;
+package lucas.exercicios.primeiralista.sistemabiblioteca;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package aula02.exercicios.exerc02;
+package lucas.aula02.exerc02;
 
 public class Main {
     public static void main(String[] args) {

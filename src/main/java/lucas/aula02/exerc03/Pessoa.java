@@ -1,4 +1,4 @@
-package aula02.exercicios.exerc03;
+package lucas.aula02.exerc03;
 
 public class Pessoa {
     protected String nome, telefone;

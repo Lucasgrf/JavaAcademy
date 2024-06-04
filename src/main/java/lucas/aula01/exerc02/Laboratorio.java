@@ -1,4 +1,4 @@
-package aula01.exerc02;
+package lucas.aula01.exerc02;
 
 public class Laboratorio {
     public String local;

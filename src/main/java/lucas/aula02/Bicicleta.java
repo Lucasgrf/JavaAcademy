@@ -1,4 +1,4 @@
-package lucas;
+package lucas.aula02;
 
 public class Bicicleta extends Veiculo{
     public String marca;

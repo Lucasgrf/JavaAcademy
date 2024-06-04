@@ -1,4 +1,4 @@
-package exercicios.primeiralista.sistemaimposto;
+package lucas.exercicios.primeiralista.sistemaimposto;
 
 public class ImpostoRenda{
     private Pessoa pessoa;

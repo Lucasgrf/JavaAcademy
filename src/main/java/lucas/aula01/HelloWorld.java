@@ -1,4 +1,4 @@
-package aula01;
+package lucas.aula01;
 
 public class HelloWorld {
     public static void main(String[] args) {

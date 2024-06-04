@@ -1,4 +1,4 @@
-package exercicios.primeiralista.sistemaimposto;
+package lucas.exercicios.primeiralista.sistemaimposto;
 
 public class FaixaImpostoRenda {
     public static int calcularFaixaIR(double salario){

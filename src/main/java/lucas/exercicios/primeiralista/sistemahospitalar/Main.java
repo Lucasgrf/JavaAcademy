@@ -1,4 +1,4 @@
-package exercicios.primeiralista.sistemahospitalar;
+package lucas.exercicios.primeiralista.sistemahospitalar;
 
 public class Main {
     public static void main(String[] args) {

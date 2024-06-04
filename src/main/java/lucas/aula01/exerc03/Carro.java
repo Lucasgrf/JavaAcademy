@@ -1,4 +1,4 @@
-package aula01.exerc03;
+package lucas.aula01.exerc03;
 
 public class Carro {
     private String fabricante, modelo;

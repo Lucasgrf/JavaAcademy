@@ -1,4 +1,4 @@
-package exercicios.primeiralista.sistemacompras;
+package lucas.exercicios.primeiralista.sistemacompras;
 
 public class Main {
     public static void main(String[] args) {

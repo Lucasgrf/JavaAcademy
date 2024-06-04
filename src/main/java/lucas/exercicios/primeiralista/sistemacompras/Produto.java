@@ -1,4 +1,4 @@
-package exercicios.primeiralista.sistemacompras;
+package lucas.exercicios.primeiralista.sistemacompras;
 
 public class Produto {
     private String nome;

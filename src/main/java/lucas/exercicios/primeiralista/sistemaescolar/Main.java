@@ -1,4 +1,4 @@
-package exercicios.primeiralista.sistemaescolar;
+package lucas.exercicios.primeiralista.sistemaescolar;
 
 public class Main {
     public static void main(String[] args) {
