@@ -1,4 +1,4 @@
-package aula02;
+package lucas;
 
 public class Heranca {
     public static void main(String[] args) {

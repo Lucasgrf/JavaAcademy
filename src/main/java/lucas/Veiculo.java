@@ -1,4 +1,4 @@
-package aula02;
+package lucas;
 
 public class Veiculo {
     public int numeroRodas;

@@ -1,4 +1,4 @@
-package aula02;
+package lucas;
 
 public class Carro extends Veiculo {
     public String modelo, cor, fabricante;
