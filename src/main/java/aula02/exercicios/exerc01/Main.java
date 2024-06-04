@@ -17,6 +17,4 @@ public class Main extends Usuario{
         Usuario usuario = new Usuario();
         System.out.println(usuario.exibirInfo(nome, email, telefone));
     }
-
-
 }
