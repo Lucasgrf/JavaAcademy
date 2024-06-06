@@ -5,6 +5,7 @@ public class Main {
         Duck duck = new Duck();
         Flyable duck1 = new Duck();
         Swimmable duck3 = new Duck();
+        Voice duck4 = new Duck();
 
         duck.fly();
         duck.swim();
@@ -12,5 +13,6 @@ public class Main {
 
         duck1.fly(); //Apenas voa;
         duck3.swim();//Apenas nada;
+        duck4.talk();//Apenas fala;
     }
 }
