@@ -14,7 +14,17 @@ public class ImpostoRenda{
         double salario = pessoa.getSalario();
         faixaIR = FaixaImpostoRenda.calcularFaixaIR(salario);
         double aliquota = FaixaImpostoRenda.obterAliquota(faixaIR);
-        valorImposto = salario * aliquota;
+        if(faixaIR == 1){
+            valorImposto = 0;
+        }else if(faixaIR == 2){
+            valorImposto = (salario * aliquota) - 158.40;
+        }else if(faixaIR == 3){
+            valorImposto = (salario * aliquota) - 370.40;
+        }else if(faixaIR == 4){
+            valorImposto = (salario * aliquota) - 651.73;
+        }else if(faixaIR == 5){
+            valorImposto = (salario * aliquota) - 884.96;
+        }
     }
 
     public void imprimir(){
