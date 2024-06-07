@@ -1,4 +1,4 @@
-package lucas.aula04.interface_aluno;
+package lucas.aula04.interfaces.interface_aluno;
 
 public class Aluno implements Comparable<Aluno> {
     private final String nome;

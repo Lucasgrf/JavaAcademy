@@ -1,4 +1,4 @@
-package lucas.aula04.interface_duck;
+package lucas.aula04.interfaces.interface_duck;
 
 public class Duck implements Swimmable, Flyable, Voice {
     @Override

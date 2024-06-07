@@ -1,4 +1,4 @@
-package lucas.aula04.interface_pet;
+package lucas.aula04.interfaces.interface_pet;
 
 public class Cat implements Pet{
     private final String name;

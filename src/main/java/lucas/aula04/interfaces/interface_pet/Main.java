@@ -1,4 +1,4 @@
-package lucas.aula04.interface_pet;
+package lucas.aula04.interfaces.interface_pet;
 
 import java.util.ArrayList;
 import java.util.Collections;

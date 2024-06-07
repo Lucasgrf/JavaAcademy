@@ -1,4 +1,4 @@
-package lucas.aula04.interface_aluno;
+package lucas.aula04.interfaces.interface_aluno;
 
 import java.util.ArrayList;
 import java.util.List;
