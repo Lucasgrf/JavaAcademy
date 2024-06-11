@@ -17,6 +17,5 @@ public interface Produto {
 
     String exibirDetalhes();
 
-    double getSubTotal();
 
 }

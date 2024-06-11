@@ -15,18 +15,12 @@ public class Eletronico extends ProdutoBase {
         return garantiaMeses;
     }
 
-    public void setGarantiaMeses(int garantiaMeses) {
-        this.garantiaMeses = garantiaMeses;
-    }
-
     public String exibirDetalhes() {
-        String s = "";
-        s += super.toString();
-        s += "\nGarantia meses: " + garantiaMeses;
-        return s;
+        return String.format("Nome: %s, Preço: %.2f, Garantia: %d meses, Quantidade: %d",
+                getNome(), getPreco(), getGarantiaMeses(), getQuantidade());
     }
 
     public String getTipo() {
-        return getClass().getSimpleName();
+        return "Eletrônico";
     }
 }

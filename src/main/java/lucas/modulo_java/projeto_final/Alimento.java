@@ -11,23 +11,12 @@ public class Alimento extends ProdutoBase {
         this.dataValidade = dataValidade;
     }
 
-    public String getDataValidade() {
-        return dataValidade;
-    }
-
-    public void setDataValidade(String dataValidade) {
-        this.dataValidade = dataValidade;
-    }
-
-
     public String exibirDetalhes() {
-        String s = "";
-        s += super.toString();
-        s += "\nData de validade: " + dataValidade;
-        return s;
+        return String.format("Nome: %s, Preço: %.2f, Data de Validade: %s, Quantidade: %d",
+                getNome(), getPreco(), dataValidade, getQuantidade());
     }
 
     public String getTipo() {
-        return getClass().getSimpleName();
+        return "Alimento";
     }
 }

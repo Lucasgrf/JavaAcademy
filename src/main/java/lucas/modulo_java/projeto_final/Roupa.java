@@ -16,27 +16,16 @@ public class Roupa extends ProdutoBase{
         return tamanho;
     }
 
-    public void setTamanho(String tamanho) {
-        this.tamanho = tamanho;
-    }
-
     public String getCor() {
         return cor;
     }
 
-    public void setCor(String cor) {
-        this.cor = cor;
-    }
-
     public String exibirDetalhes() {
-        String s = "";
-        s += super.toString();
-        s += "\nTamanho: " + tamanho;
-        s += "\nCor: " + cor;
-        return s;
+        return String.format("Nome: %s, Preço: %.2f, Tamanho: %s, Cor: %s, Quantidade: %d",
+                getNome(), getPreco(), getTamanho(), getCor(), getQuantidade());
     }
 
     public String getTipo(){
-        return getClass().getSimpleName();
+        return "Roupa";
     }
 }

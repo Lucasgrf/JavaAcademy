@@ -1,38 +1,64 @@
 package lucas.modulo_java.projeto_final;
 
+import java.io.PrintWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CarrinhoDeCompras {
-    private List<Produto> itens;
+    private final List<Produto> itens;
 
     public CarrinhoDeCompras() {
-        itens = new ArrayList<Produto>();
+        itens = new ArrayList<>();
     }
+
+    public List<Produto> getItens() {
+        return itens;
+    }
+
 
     public void adicionarItem(Produto produto) {
         itens.add(produto);
     }
 
-    public void removerItem(Produto produto) {
-        itens.remove(produto);
+    public boolean removerItemPorNome(String nome) {
+        return itens.removeIf(item -> item.getNome().equalsIgnoreCase(nome));
     }
+
 
     public void listarItens() {
         for (Produto produto : itens) {
-            System.out.print(produto);
-            System.out.println(" - " + produto.getQuantidade());
+            System.out.println(produto.exibirDetalhes());
         }
     }
 
-    public List<Produto> exportarListaProdutos() {
+    public void exportarListaProdutos() {
         itens.removeAll(itens);
-        return itens;
     }
 
-    public double calcularSubTotal() {
-        return itens.stream().mapToDouble(Produto::getQuantidade).sum();
+    public double calcularTotal() {
+        return itens.stream().mapToDouble(item -> item.getQuantidade() * item.getPreco()).sum();
     }
 
+    public void gerarArquivoTexto(String nomeArquivo) {
+        try (PrintWriter writer = new PrintWriter(nomeArquivo)) {
+            writer.println("item:\tQtd:\tNome:\t\tPreço:\t\tSubTotal:");
 
+            int itemNum = 1;
+
+            for (Produto produto : itens) {
+                double subTotal = produto.getQuantidade() * produto.getPreco();
+                writer.printf("%d\t%d\t%s\t\t%.2f\t\t%.2f%n",
+                        itemNum, produto.getQuantidade(), produto.getNome(), produto.getPreco(), subTotal);
+                itemNum++;
+            }
+            double total = calcularTotal();
+
+            writer.printf("Total: %.2f%n", total);
+
+        } catch (IOException e) {
+            System.err.println("Erro ao escrever no arquivo " + e.getMessage());
+        }
+    }
 }
+

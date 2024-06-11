@@ -4,14 +4,11 @@ public abstract class ProdutoBase implements Produto {
     private String nome;
     private double preco;
     private int quantidade;
-    private int item;
 
     public ProdutoBase() {
     }
 
     public ProdutoBase(String nome, double preco, int quantidade) {
-        item++;
-        this.item = item;
         this.nome = nome;
         this.preco = preco;
         this.quantidade = quantidade;
@@ -52,28 +49,7 @@ public abstract class ProdutoBase implements Produto {
         this.quantidade = quantidade;
     }
 
-    public int getItem() {
-        return item;
-    }
-
-
-    public double getSubTotal() {
-        return preco * quantidade;
-    }
 
     public abstract String exibirDetalhes();
 
-    {
-
-    }
-
-    @Override
-    public String toString() {
-        String s = "";
-        s += "Item: " + item + "\n";
-        s += "Quantidade: " + quantidade + "\n";
-        s += "Nome: " + nome + "\n";
-        s += "Preco: " + preco + "\n";
-        return s;
-    }
 }
