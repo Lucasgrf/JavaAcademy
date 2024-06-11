@@ -42,13 +42,13 @@ public class CarrinhoDeCompras {
 
     public void gerarArquivoTexto(String nomeArquivo) {
         try (PrintWriter writer = new PrintWriter(nomeArquivo)) {
-            writer.println("item:\tQtd:\tNome:\t\tPreço:\t\tSubTotal:");
+            writer.println("item:\t\tQtd:\t\tNome:\t\tPreço:\t\tSubTotal:");
 
             int itemNum = 1;
 
             for (Produto produto : itens) {
                 double subTotal = produto.getQuantidade() * produto.getPreco();
-                writer.printf("%d\t%d\t%s\t\t%.2f\t\t%.2f%n",
+                writer.printf("%d\t\t%d\t\t%s\t\t%.2f\t\t%.2f%n",
                         itemNum, produto.getQuantidade(), produto.getNome(), produto.getPreco(), subTotal);
                 itemNum++;
             }
