@@ -86,6 +86,30 @@ insert into filmes(titulo_original,titulo,quantidade,fk_categoria,fk_genero) --1
 insert into filmes(titulo_original,titulo,quantidade,fk_categoria,fk_genero) --15
 	values ('Echoes of the Past','Ecos do Passado',33,2,9);
 
+insert into filmes(titulo_original,titulo,quantidade,fk_categoria,fk_genero) --16
+	values ('Panic!','Pânico!',20,8,10);
+
+insert into filmes(titulo_original,titulo,quantidade,fk_categoria,fk_genero) --17
+	values ('Panic! 2','Pânico! 2',20,10,8);
+
+insert into filmes(titulo_original,titulo,quantidade,fk_categoria,fk_genero) --18
+	values ('Panic! 3','Pânico! 3',20,1,4);
+
+insert into filmes(titulo_original,titulo,quantidade,fk_categoria,fk_genero) --19
+	values ('Panic! 4','Pânico! 4',20,4,1);
+
+insert into filmes(titulo_original,titulo,quantidade,fk_categoria,fk_genero) --20
+	values ('Panic! 5','Pânico! 5',20,1,1);
+
+insert into filmes(titulo_original,titulo,quantidade,fk_categoria,fk_genero) --21
+	values ('Panic! 6','Pânico! 6',20,4,4);
+
+insert into filmes(titulo_original,titulo,quantidade,fk_categoria,fk_genero) --22
+	values ('Panic! 7','Pânico! 5',20,8,8);
+
+insert into filmes(titulo_original,titulo,quantidade,fk_categoria,fk_genero) --23
+	values ('Panic! 8','Pânico! 6',20,10,10);
+
 select * from filmes
 
 --filmes_ator
@@ -133,6 +157,54 @@ insert into filme_atores (ator_id, filme_id, ator, diretor) --14
 
 insert into filme_atores (ator_id, filme_id, ator, diretor) --15
 	values (5, 1, 'Sim', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --16
+	values (3, 9, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --17
+	values (3, 6, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --18
+	values (5, 8, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --19
+	values (10, 10, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --20
+	values (1, 5, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --21
+	values (1, 8, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --22
+	values (1, 10, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --23
+	values (3, 5, 'Não', 'Não'); -- fim
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --24
+	values (2, 16, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --25
+	values (5, 17, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --26
+	values (7, 18, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --27
+	values (8, 19, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --28
+	values (1, 20, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --29
+	values (9, 21, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --30
+	values (10, 22, 'Não', 'Não');
+
+insert into filme_atores (ator_id, filme_id, ator, diretor) --31
+	values (6, 23, 'Não', 'Não');
 
 select * from filme_atores
 
@@ -267,7 +339,31 @@ INSERT INTO locacao (data_locacao, desconto, multa, sub_total, fk_cliente)
 VALUES ('2024-02-02', 4.00, 0.00, 60.00, 8);
 
 INSERT INTO locacao (data_locacao, desconto, multa, sub_total, fk_cliente)
-VALUES ('2024-02-03', 0.00, 1.00, 50.00, 6);
+VALUES ('2024-02-03', 0.00, 1.00, 50.00, 6); -- fim
+
+INSERT INTO locacao (data_locacao, desconto, multa, sub_total, fk_cliente)
+VALUES ('2024-02-03', 0.00, 3.00, 50.00, 2);
+
+INSERT INTO locacao (data_locacao, desconto, multa, sub_total, fk_cliente)
+VALUES ('2024-02-04', 0.00, 0.00, 25.00, 3);
+
+INSERT INTO locacao (data_locacao, desconto, multa, sub_total, fk_cliente)
+VALUES ('2024-02-05', 0.00, 0.00, 20.00, 6);
+
+INSERT INTO locacao (data_locacao, desconto, multa, sub_total, fk_cliente)
+VALUES ('2024-02-06', 0.00, 1.00, 15.00, 10);
+
+INSERT INTO locacao (data_locacao, desconto, multa, sub_total, fk_cliente)
+VALUES ('2024-02-07', 0.00, 0.00, 30.00, 9);
+
+INSERT INTO locacao (data_locacao, desconto, multa, sub_total, fk_cliente)
+VALUES ('2024-02-08', 0.00, 1.00, 45.00, 7);
+
+INSERT INTO locacao (data_locacao, desconto, multa, sub_total, fk_cliente)
+VALUES ('2024-02-09', 0.00, 0.00, 35.00, 8);
+
+INSERT INTO locacao (data_locacao, desconto, multa, sub_total, fk_cliente)
+VALUES ('2024-02-10', 0.00, 0.00, 50.00, 2);
 
 select * from locacao
 
@@ -327,10 +423,32 @@ INSERT INTO locacao_filme (locacao_id, filme_id, valor, num_dias, data_devolucao
 VALUES (20, 8, 14.00, 5, '2024-02-06');
 
 INSERT INTO locacao_filme (locacao_id, filme_id, valor, num_dias, data_devolucao)
-VALUES (21, 9, 13.00, 4, '2024-02-05');
+VALUES (21, 9, 13.00, 4, '2024-02-05'); -- fim
 
 INSERT INTO locacao_filme (locacao_id, filme_id, valor, num_dias, data_devolucao)
-VALUES (22, 10, 10.00, 3, '2024-02-05');
+VALUES (22, 16, 11.00, 8, '2024-02-06');
+
+INSERT INTO locacao_filme (locacao_id, filme_id, valor, num_dias, data_devolucao)
+VALUES (23, 17, 12.00, 7, '2024-02-07');
+
+INSERT INTO locacao_filme (locacao_id, filme_id, valor, num_dias, data_devolucao)
+VALUES (24, 18, 13.00, 6, '2024-02-08');
+
+INSERT INTO locacao_filme (locacao_id, filme_id, valor, num_dias, data_devolucao)
+VALUES (25, 19, 14.00, 5, '2024-02-09');
+
+INSERT INTO locacao_filme (locacao_id, filme_id, valor, num_dias, data_devolucao)
+VALUES (26, 20, 15.00, 4, '2024-02-10');
+
+INSERT INTO locacao_filme (locacao_id, filme_id, valor, num_dias, data_devolucao)
+VALUES (27, 21, 16.00, 3, '2024-02-11');
+
+INSERT INTO locacao_filme (locacao_id, filme_id, valor, num_dias, data_devolucao)
+VALUES (28, 22, 17.00, 2, '2024-02-12');
+
+INSERT INTO locacao_filme (locacao_id, filme_id, valor, num_dias, data_devolucao)
+VALUES (29, 23, 18.00, 1, '2024-02-13');
+
 
 select * from locacao_filme
 
