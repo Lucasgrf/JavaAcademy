@@ -30,6 +30,8 @@ create table dinossauros
 	nome varchar(80) not null,
 	toneladas integer not null,
 	ano_descoberta integer not null,
+	inicio integer,
+	fim integer,
 	fk_grupo integer,
 	fk_descobridor integer,
 	fk_regiao integer,
@@ -56,9 +58,9 @@ insert into grupos(nome) values('Terápodes');
 
 select * from grupos
 
-insert into eras(nome,era_inicio,era_fim) values('Cretáceo',145,65);
-insert into eras(nome,era_inicio,era_fim) values('Jurássico',200,145);
-insert into eras(nome,era_inicio,era_fim) values('Triássico',251,200);
+insert into eras(nome,era_inicio,era_fim) values('Cretáceo',145,65); --2
+insert into eras(nome,era_inicio,era_fim) values('Jurássico',200,145); --3
+insert into eras(nome,era_inicio,era_fim) values('Triássico',251,200); --4
 
 select * from eras
 
@@ -73,28 +75,49 @@ select * from descobridores
 
 --Trigger
 	
-CREATE OR REPLACE FUNCTION verificaera() 
+CREATE OR REPLACE FUNCTION verificaera()
 RETURNS TRIGGER AS $BODY$
-DECLARE 
-		inicio integer := 0;
-		fim integer := 0;
 BEGIN
-	era_inicio := (select eras.era_inicio
-					 from eras 
-					 where eras.id = NEW.fk_era);
-	era_fim := (select eras.era_fim
-					 from eras 
-					 where eras.id = NEW.fk_era);
-	IF(estoqueatual >= NEW.quantidade)
-	THEN
-		update produtos set estoque = (estoqueatual - NEW.quantidade)
-		where produtos.id = new.fk_produto;
-		raise notice 'Tudo certo!';
-		return new;
-	ELSE
-		RAISE EXCEPTION 'Inserção cancelada!';
-		return null;
-	END IF;
-END
+    IF (NEW.inicio <= (SELECT era_inicio FROM eras WHERE id = NEW.fk_era) AND
+        NEW.fim >= (SELECT era_fim FROM eras WHERE id = NEW.fk_era)) THEN
+        RAISE NOTICE 'Tudo certo!';
+        RETURN NEW;
+    ELSE
+        RAISE EXCEPTION 'Inserção cancelada!';
+        RETURN NULL;
+    END IF;
+END;
 $BODY$
-language plpgsql volatile;
+LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_era
+BEFORE INSERT OR UPDATE
+ON dinossauros
+FOR EACH ROW
+EXECUTE FUNCTION verificaera();
+
+--DROP TRIGGER trigger_era ON dinossauros; //dropar uma trigger
+
+--Inserts
+insert into dinossauros(nome,toneladas,ano_descoberta,inicio,fim,fk_grupo,fk_descobridor,fk_regiao,fk_era) 
+	values('Saichania',4,1977,145,66,1,1,1,2);
+
+insert into dinossauros(nome,toneladas,ano_descoberta,inicio,fim,fk_grupo,fk_descobridor,fk_regiao,fk_era) 
+	values('Tricerátops',6,1887,70,66,2,2,2,2);
+
+insert into dinossauros(nome,toneladas,ano_descoberta,inicio,fim,fk_grupo,fk_descobridor,fk_regiao,fk_era) 
+	values('Kentrossauro',2,1909,200,145,3,3,3,3);
+
+insert into dinossauros(nome,toneladas,ano_descoberta,inicio,fim,fk_grupo,fk_descobridor,fk_regiao,fk_era) 
+	values('Pinacossauro',6,1999,85,75,1,4,4,4); --Era errada
+
+insert into dinossauros(nome,toneladas,ano_descoberta,inicio,fim,fk_grupo,fk_descobridor,fk_regiao,fk_era) 
+	values('Alossauro',3,1877,155,150,4,5,5,3);
+
+insert into dinossauros(nome,toneladas,ano_descoberta,inicio,fim,fk_grupo,fk_descobridor,fk_regiao,fk_era) 
+	values('Torossauro',8,1891,67,65,2,2,6,2);
+
+insert into dinossauros(nome,toneladas,ano_descoberta,inicio,fim,fk_grupo,fk_descobridor,fk_regiao,fk_era) 
+	values('Anquilossauro',8,1906,66,63,1,6,5,4); --Era errada
+
+select * from dinossauros
